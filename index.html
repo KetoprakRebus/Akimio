@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akimio kita</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<script>
+window.addEventListener('scroll', function() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav ul li a[href^="#"]');
+  let scrollPos = window.scrollY + 80; // 80px offset for navbar height
+
+  sections.forEach(section => {
+    if (
+      scrollPos >= section.offsetTop &&
+      scrollPos < section.offsetTop + section.offsetHeight
+    ) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + section.id) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+});
+</script>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href=''>AkimioTeam</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cources">Cources</a></li>
+                    <li><a href="#tutors">Tutors</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="signup.html" class="tbl-biru">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <!--untuk Home  -->
+        <section id="home">
+            <img src=https://th.bing.com/th/id/R.555d4c42ac7b06d8f46aff8b5fe03020?rik=TvJuuYAVQV6YDg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-kUXX6niAFio%2fVNYOgyE2fTI%2fAAAAAAAAB-w%2fijUpCFhqn9g%2fs1600%2flogo-ugm-hitam-putih.jpg&ehk=Fed9iFfTH5uQtxuc9lnEa6r%2bfOmMAYezwxTHTLT0CpE%3d&risl=&pid=ImgRaw&r=0 />
+            <div class="kolom">
+                <p class="deskripsi">Mabar #dirumahkomeng</p>
+                <h2>Belajar Coding itu mudah</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, ea. Officiis exercitationem optio ullam culpa. Illum eaque corporis suscipit.</p>
+                <p><a href="" class="tbl-pink">Pelajari Lebih Lanjut</a></p>
+            </div>
+        </section>
+
+        <!--untuk Cources  -->
+        <section id="cources">
+            <div class="kolom">
+                <p class="deskripsi">Mabar #dirumahkomeng</p>
+                <h2>Online Cources</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, ea. Officiis exercitationem optio ullam culpa. Illum eaque corporis suscipit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, ea. Officiis exercitationem optio ullam culpa. Illum eaque corporis suscipit.</p>
+                <p><a href="" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
+            </div>
+            <img src="https://tse3.mm.bing.net/th/id/OIP.J1qXvZG6MYJpBKjVVh-GzwHaHf?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" />
+        </section>
+
+        <!--untuk Tutors  -->
+        <section id="tutors">
+            <div class="tengah">
+                <div class="kolom">
+                    <p class="deskripsi">Mabar #dirumahkomeng</p>
+                    <h2>Tutors</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, ea. Officiis exercitationem optio ullam culpa.</p>
+                   
+                </div>
+
+                <div class="tutor-list">
+                    <div class="kartu-tutor">
+                        <img src="https://i.pinimg.com/originals/bc/96/19/bc96191cc36d90e922d015d11932a750.jpg"/> <p>"Ronaldo"</p>
+                    </div>
+                    <div class="kartu-tutor">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.nlDTAzFFG2SNLiJunuoL_gHaLL?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"/> <p>"Messi"</p>
+                    </div>
+                    <div class="kartu-tutor">
+                        <img src="https://karnatakastateopenuniversity.in/wp-content/uploads/2022/12/Neymar-Wiki-683x1024.jpg"/> <p>"Neymar"</p>
+                    </div>
+                    <div class="kartu-tutor">
+                        <img src="https://wallpapercave.com/wp/wp3644144.jpg"/> <p>"Van Basten"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--untuk partners  -->
+        <section id="partners">
+            <div class="tengah">
+                <div class="kolom">
+                <h2>Partners</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, ea. Officiis exercitationem optio ullam culpa. Illum eaque corporis suscipit.</p>
+                
+            </div>
+        </section>
+
+            <div class="partner-list">
+                <div class="kartu-partner">
+                    <img src="https://1.bp.blogspot.com/-IOm2dGW3gkc/X2gh3MuOqoI/AAAAAAAAHKA/EdK1C7LyZWE7qxQNQDPIBXFGCXH4c7U7ACLcBGAsYHQ/s1000/Logo+Universitas+Indonesia-01.png"/> <p>"Universitas Indonesia"</p>
+                </div>
+                <div class="kartu-partner">
+                    <img src="https://th.bing.com/th/id/OIP.2fab6iu689onEyHzJlKe2QHaFj?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"/> <p>"Institut Teknologi Bandung"</p>
+                </div>
+                <div class="kartu-partner">
+                    <img src="https://th.bing.com/th/id/R.6a05291335d8c4827709b2c69cc398ad?rik=UHRMnUVwfFLLfQ&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f627e1feafb8551d41bf21cbf.png&ehk=q1TKcrCus2Y4PfxajRjkztZwRmSRK17BS4R6m47XztQ%3d&risl=&pid=ImgRaw&r=0"/> <p>"Institut Pertanian Bogor"</p>
+                </div>
+                <div class="kartu-partner">
+                    <img src="https://th.bing.com/th/id/R.1cd4e68079f7f335df889d95af148f6c?rik=VTN1pDkoZMyPOw&riu=http%3a%2f%2fstatic.ub.ac.id%2fstatic_files%2flogo%2fFrame-UB-BT-ala-Jpg.jpg&ehk=%2bSoa8%2fKsid2tNDdbjhgppos8h1vnjQwnI6zBCGWiRGI%3d&risl=&pid=ImgRaw&r=0"/> <p>"Universitas Brawijaya"</p>
+                </div>
+            </div>
+        </section>
+        <!--untuk contact  -->
+        
+    <footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <p>&copy; 2025 Akimio Team. All rights reserved.</p>
+    </div>
+    <div class="footer-center">
+        
+      <p>Follow us:</p>
+      <a href="https://www.instagram.com/akimio.id/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100054243726189" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:akimio@email.com"><i class="fa fa-envelope"></i></a>
+      <a href="https://wa.me/6281994139915" target="_blank"><i class="fa fa-phone"></i></a>
+    </div>
+    <div class="footer-right">
+      <p>Made with <span style="color:#fc5185;">&#10084;</span> by Akimio Team</p>
+    </div>
+
+    
+  </div>
+</footer>
+        </div>
+    </div>
+    
+</body>
+</html>

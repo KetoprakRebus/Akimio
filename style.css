@@ -1,0 +1,423 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 50px;
+    font-weight: 800;
+    float: left;
+    font-family: courier;
+    color: #364f6b;
+}
+
+.menu {
+    float: right;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 1;
+    border-bottom: 1px solid black;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+     position: relative;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 28px;
+    color: #364f6b;
+    font-weight: 600;
+    font-size: 1.08rem;
+    text-decoration: none;
+    border-radius: 999px; /* Membuat oval */
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(52,79,107,0.07);
+    transition: 
+        background 0.2s,
+        color 0.2s,
+        box-shadow 0.2s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+nav ul li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 8px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #fc5185 0%, #364f6b 100%);
+    transform: scaleX(0);
+    transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+    z-index: 0;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+nav ul li a.tbl-biru {
+    background: linear-gradient(90deg, #364f6b 0%, #fc5185 100%);
+    color: #fff;
+    border-radius: 999px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 2px 8px rgba(52,79,107,0.13);
+    transition: background 0.2s, color 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a.tbl-biru:hover {
+    background: linear-gradient(90deg, #fc5185 0%, #364f6b 100%);
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    nav ul li a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+section { 
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.kolom {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans-ms';
+    color: #364f6b;
+}
+
+h2 {
+    font-family: 'comic sans-ms';
+    font-size: 45px;
+    font-weight: 800;
+    color: #364f6b;
+    margin-bottom: 20px;
+    width: 100%;
+    line-height: 50px;
+}
+
+a.tbl-biru {
+    background: #364f6b;
+    color: white;
+    margin-top: 20px ;
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.tbl-biru:hover {
+    background: #fc5185;
+    text-decoration: none;
+}
+
+a.tbl-pink {
+    background: #fc5185;
+    color: white;
+    margin-top: 20px ;
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.tbl-pink:hover {
+    background: #364f6b;
+    text-decoration: none;
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+.tengah {
+    text-align: center;
+    width: 100%;
+}
+
+.tutor-list{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.kartu-tutor{
+    width: 20%;
+    margin: 0 auto;
+}
+
+.kartu-tutor img{
+    width: 80%;
+    border-radius: 50%;
+}
+
+.kartu-tutor p {
+    font-family: 'comic sans-ms';
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    color: #364f6b;
+}
+
+.partner-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kartu-partner {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.kartu-partner img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+#contact {
+    background: #dedede;
+    padding: 50px 0px 50px 0px;
+    border-radius: 30px;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+footer-section {
+    width: 20%;
+    margin: 0 auto;
+}
+
+h3 {
+    font-family: 'comic sans-ms';
+    font-weight: 800;
+    font-size: 30px;
+    margin-top: 20px;
+    color: #364f6b;
+    width: 100%;
+    line-height: 50px;
+}
+
+
+
+.signup-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fc5185 0%, #364f6b 100%);
+}
+
+.signup-form {
+    background: #fff;
+    padding: 32px 28px 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 18px;
+    border: 2px solid #fc5185; 
+}
+
+.signup-form h2 {
+    text-align: center;
+    color: #364f6b;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.input-group i {
+    color: #fc5185;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center; /* Tengah */
+}
+
+.signup-form .tbl-biru {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background: #364f6b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.signup-form .tbl-biru:hover {
+    background: #fc5185;
+}
+
+.signup-note {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #364f6b;
+}
+
+.signup-note a {
+    color: #fc5185;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-note a:hover {
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ...existing code... */
+
+.main-footer {
+    background: #364f6b;
+    color: #fff;
+    padding: 28px 0 18px 0;
+    border-radius: 24px 24px 0 0;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.footer-center a {
+    color: #fc5185;
+    margin: 0 8px;
+    font-size: 1.4rem;
+    transition: color 0.2s;
+    vertical-align: middle;
+}
+
+.footer-center a:hover {
+    color: #fff;
+}
+
+.footer-left p, .footer-right p, .footer-center p {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+    }
+}
+
+/* ...existing code... */
+

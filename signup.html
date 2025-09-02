@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tambahkan link font awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+      <form id="signup-form" action="#" method="post" class="signup-form">
+        <h2><i class="fa fa-user-plus"></i> Sign Up</h2>
+        <div class="input-group">
+          <i class="fa fa-user"></i>
+          <input type="text" name="username" placeholder="Username" required>
+        </div>
+        <div class="input-group">
+          <i class="fa fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fa fa-lock"></i>
+          <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="tbl-biru">Daftar</button>
+        <p class="signup-note">Sudah punya akun? <a href="login.html">Login di sini</a></p>
+      </form>
+      
+    </div>
+    <script src="main.js"></script>
+
+    <script>
+document.getElementById('signup-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Simulasi proses sign up, lalu redirect ke halaman utama
+  window.location.href = "index.html";
+});
+
+document.getElementById('login-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Simulasi proses login, lalu redirect ke halaman utama
+  window.location.href = "index.html";
+});
+</script>
+
+<script>
+document.getElementById('signup-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Ambil data dari input
+  const username = this.username.value;
+  const email = this.email.value;
+  const password = this.password.value;
+
+  // Simpan ke localStorage (array of users)
+  let users = JSON.parse(localStorage.getItem('users') || '[]');
+  users.push({ username, email, password });
+  localStorage.setItem('users', JSON.stringify(users));
+
+  alert('Sign up berhasil!');
+
+  // Redirect ke halaman utama
+  window.location.href = "index.html";
+});
+</script>
+</body>
+</html>
